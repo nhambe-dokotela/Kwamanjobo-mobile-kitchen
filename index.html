@@ -3,82 +3,99 @@
 <head> 
 <meta charset="UTF-8">
 <title>KwaManjobo’s Mobile Kitchen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* General body and background */
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: url('kitchen-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    font-size: 22px; /* base font size */
-    line-height: 1.8; /* more spacing */
+    font-size: 18px;
   }
 
-  header, section {
-    background-color: rgba(255, 248, 240, 0.85); /* semi-transparent for readability */
+  /* Header */
+  header {
+    background-color: rgba(230, 126, 34, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #e67e22;
+    margin-bottom: 10px;
+  }
+
+  /* Sections styling */
+  section {
+    background-color: rgba(255, 248, 240, 0.85);
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 7px rgba(0,0,0,0.15);
   }
 
-  header {
-    background-color: rgba(230, 126, 34, 0.9);
-    color: white;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-  }
-
-  h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-  }
-
-  p, ol, ul {
-    font-size: 22px;
-  }
-
+  /* Menu styling */
   ul {
     list-style-type: none;
     padding: 0;
   }
-
   li.menu-item {
     margin-bottom: 25px;
     text-align: center;
   }
-
   li.menu-item img {
-    max-width: 300px;
-    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     display: block;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 10px;
   }
 
+  /* Buttons styling */
   button {
     background-color: #3498db;
     color: white;
     border: none;
     padding: 12px 20px;
+    margin-top: 5px;
     cursor: pointer;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 18px;
+    transition: transform 0.2s, background-color 0.2s;
   }
-
   button:hover {
     background-color: #2980b9;
+    transform: scale(1.05);
   }
 
+  /* Ordered list for instructions */
   ol {
-    padding-left: 25px;
+    padding-left: 20px;
   }
 
+  /* Reviews styling */
   .reviews p {
-    margin: 6px 0;
+    margin: 5px 0;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px 16px;
+    }
+    li.menu-item img {
+      max-width: 90%;
+    }
+    section {
+      margin: 15px;
+      padding: 15px;
+    }
   }
 </style>
 </head>
@@ -132,7 +149,7 @@
 <section>
   <h2>Contact & Info</h2>
   <p>WhatsApp: 27648380142</p>
-  <p>Delivery Area: Campus </p>
+  <p>Delivery Area: Campus</p>
 </section>
 
 <section class="reviews">
