@@ -7,65 +7,78 @@
   body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: url('kitchen-bg.jpg') no-repeat center center fixed; /* background image */
-    background-size: cover; /* cover whole page */
+    background: url('kitchen-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
-    font-size: 30px; /* increase base font size */
+    font-size: 22px; /* base font size */
+    line-height: 1.8; /* more spacing */
   }
+
   header, section {
     background-color: rgba(255, 248, 240, 0.85); /* semi-transparent for readability */
     margin: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
   }
+
   header {
-    background-color: rgba(230, 126, 34, 0.9); /* strong header color */
+    background-color: rgba(230, 126, 34, 0.9);
     color: white;
     text-align: center;
   }
-  h1, h2 {
-    color: #e67e22;
-    margin-bottom: 10px;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
   }
-  p {
-    line-height: 1.5;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
   }
-  section {
-    padding: 15px;
+
+  p, ol, ul {
+    font-size: 22px;
   }
+
   ul {
     list-style-type: none;
     padding: 0;
   }
+
   li.menu-item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
   }
+
   li.menu-item img {
-    max-width: 500px;
-    border-radius: 8px;
+    max-width: 300px;
+    border-radius: 10px;
     display: block;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 15px auto;
   }
+
   button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 10px 16px;
-    margin-top: 5px;
+    padding: 12px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 25px;
+    border-radius: 6px;
+    font-size: 20px;
   }
+
   button:hover {
     background-color: #2980b9;
   }
+
   ol {
-    padding-left: 20px;
+    padding-left: 25px;
   }
+
   .reviews p {
-    margin: 5px 0;
+    margin: 6px 0;
   }
 </style>
 </head>
