@@ -1,164 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="UTF-8">
-<title>KwaManjobo’s Mobile Kitchen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KwaManjobo’s Mobile Kitchen</title>
+
 <style>
-  /* General body and background */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: url('kitchen-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
-    font-size: 18px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url('kitchen-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  font-size: 18px;
+}
+
+/* HEADER */
+header {
+  background: rgba(20, 20, 20, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+section {
+  background: rgba(255, 248, 240, 0.95);
+  margin: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #d35400;
+  margin-bottom: 15px;
+}
+
+p, li {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* MENU */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-item img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+  transform: scale(1.06);
+}
+
+/* BUTTONS */
+button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1e8449;
+  transform: translateY(-3px);
+}
+
+/* REVIEWS */
+.reviews p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+input[type="submit"] {
+  background: #e67e22;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #ca6f1e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
   }
 
-  /* Header */
-  header {
-    background-color: rgba(230, 126, 34, 0.9);
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  h1, h2 {
-    color: #e67e22;
-    margin-bottom: 10px;
+  header p {
+    font-size: 1.2rem;
   }
 
-  /* Sections styling */
   section {
-    background-color: rgba(255, 248, 240, 0.85);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+    margin: 15px;
   }
 
-  /* Menu styling */
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li.menu-item {
-    margin-bottom: 25px;
-    text-align: center;
-  }
-  li.menu-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto 10px;
-  }
-
-  /* Buttons styling */
   button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin-top: 5px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 18px;
-    transition: transform 0.2s, background-color 0.2s;
+    width: 100%;
   }
-  button:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
-  }
-
-  /* Ordered list for instructions */
-  ol {
-    padding-left: 20px;
-  }
-
-  /* Reviews styling */
-  .reviews p {
-    margin: 5px 0;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    body {
-      font-size: 16px;
-    }
-    button {
-      font-size: 16px;
-      padding: 10px 16px;
-    }
-    li.menu-item img {
-      max-width: 90%;
-    }
-    section {
-      margin: 15px;
-      padding: 15px;
-    }
-  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
   <h1>KwaManjobo’s Mobile Kitchen</h1>
-  <p>Your fighter against campus hunger! Order your favorite sandwiches easily via WhatsApp.</p>
+  <p>Fighting campus hunger — one sandwich at a time 🥪</p>
 </header>
 
-<section>
+<section id="menu">
   <h2>Menu</h2>
+
   <ul>
     <li class="menu-item">
       <img src="chicken-mayo.jpg" alt="Chicken Mayo Sandwich">
-      Chicken Mayo Sandwich – R20
-      <br>
+      <strong>Chicken Mayo Sandwich – R20</strong><br>
       <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Chicken%20Mayo%20Sandwich" target="_blank">
-        <button>Order Chicken Mayo</button>
+        <button>Order via WhatsApp</button>
       </a>
     </li>
+
     <li class="menu-item">
       <img src="tuna.jpg" alt="Tuna Sandwich">
-      Tuna Sandwich – R20
-      <br>
+      <strong>Tuna Sandwich – R20</strong><br>
       <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Tuna%20Sandwich" target="_blank">
-        <button>Order Tuna</button>
+        <button>Order via WhatsApp</button>
       </a>
     </li>
+
     <li class="menu-item">
-      <img src="egg-mayo.jpg" alt="Egg & Mayo Sandwich">
-      Egg & Mayo Sandwich – R15
-      <br>
-      <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Egg%20%26%20Mayo%20Sandwich" target="_blank">
-        <button>Order Egg & Mayo</button>
+      <img src="egg-mayo.jpg" alt="Egg Mayo Sandwich">
+      <strong>Egg & Mayo Sandwich – R15</strong><br>
+      <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Egg%20and%20Mayo%20Sandwich" target="_blank">
+        <button>Order via WhatsApp</button>
       </a>
     </li>
   </ul>
 </section>
 
 <section>
-  <h2>How to Order</h2>
-  <p>Ordering from KwaManjobo’s Mobile Kitchen is simple and student-friendly. Just follow the steps:</p>
+  <h2>How Ordering Works</h2>
   <ol>
-    <li>Browse the menu and pick your sandwich.</li>
-    <li>Click the order button to send your selection via WhatsApp.</li>
-    <li>Make payment and collect your order or arrange delivery.</li>
+    <li>Select your sandwich.</li>
+    <li>Click the WhatsApp order button.</li>
+    <li>Confirm payment & collection.</li>
   </ol>
 </section>
 
 <section>
-  <h2>Contact & Info</h2>
-  <p>WhatsApp: 27648380142</p>
-  <p>Delivery Area: Campus</p>
+  <h2>Payments</h2>
+  <p>
+     No cash on collection, ypur payment confirms your order<br>
+    📲 Mobile payments accepted (EFT / eWallet / CashSend)<br>
+    ℹ️ Payment details are shared on WhatsApp after ordering.
+  </p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>
+    📱 WhatsApp Only: <strong>27648380142</strong><br>
+    📍 Delivery Area: Campus
+  </p>
 </section>
 
 <section class="reviews">
-  <h2>Ratings & Reviews</h2>
-  <p>⭐ ⭐ ⭐ ⭐ ⭐ – “Great sandwiches! Quick delivery.” – Jane D.</p>
-  <p>⭐ ⭐ ⭐ ⭐ – “Tasty but could use more mayo.” – Sipho M.</p>
-  <p>⭐ ⭐ ⭐ ⭐ ⭐ – “Affordable and filling!” – Thabo M.</p>
-  <p>⭐ ⭐ ⭐ ⭐ – “Love the efficiency!” – Lerato K.</p>
+  <h2>Customer Reviews</h2>
+
+  <p>⭐⭐⭐⭐⭐ – “Affordable and filling.” – Thabo</p>
+  <p>⭐⭐⭐⭐ – “Quick service between classes.” – Lerato</p>
+
+  <h3>Leave a Review</h3>
+  <form id="reviewForm">
+    <input type="text" id="name" placeholder="Your name" required>
+    <textarea id="review" rows="3" placeholder="Your review" required></textarea>
+    <input type="submit" value="Submit Review">
+  </form>
+
+  <div id="userReviews"></div>
 </section>
+
+<script>
+const form = document.getElementById("reviewForm");
+const userReviews = document.getElementById("userReviews");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const review = document.getElementById("review").value;
+
+  const p = document.createElement("p");
+  p.textContent = `⭐⭐⭐⭐ – "${review}" – ${name}`;
+
+  userReviews.prepend(p);
+  form.reset();
+});
+</script>
 
 </body>
   </html>
