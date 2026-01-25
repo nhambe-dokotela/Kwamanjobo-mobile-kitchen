@@ -1,182 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KwaManjobo’s Mobile Kitchen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KwaManjobo’s Mobile Kitchen</title>
 
-<style>
-html {
-  scroll-behavior: smooth;
-}
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)
-    ),
-    url('kitchen-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #222;
-  font-size: 18px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.55)
+        ),
+        url('kitchen.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      font-size: 18px;
+    }
 
-/* HEADER */
-header {
-  background: rgba(20, 20, 20, 0.9);
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
+    /* HEADER */
+    header {
+      background: rgba(20, 20, 20, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-header h1 {
-  font-size: 3rem;
-  margin: 0;
-}
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
 
-header p {
-  font-size: 1.4rem;
-  margin-top: 10px;
-}
+    header p {
+      font-size: 1.4rem;
+      margin-top: 10px;
+    }
 
-/* SECTIONS */
-section {
-  background: rgba(255, 248, 240, 0.95);
-  margin: 25px;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+    /* SECTIONS */
+    section {
+      background: rgba(255, 248, 240, 0.95);
+      margin: 25px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 
-h2 {
-  font-size: 2.2rem;
-  color: #d35400;
-  margin-bottom: 15px;
-}
+    h2 {
+      font-size: 2.2rem;
+      color: #d35400;
+      margin-bottom: 15px;
+    }
 
-p, li {
-  font-size: 1.25rem;
-  line-height: 1.8;
-}
+    p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+    }
 
-/* MENU */
-ul {
-  list-style: none;
-  padding: 0;
-}
+    /* MENU */
+    .menu-item {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-.menu-item {
-  text-align: center;
-  margin-bottom: 40px;
-}
+    .menu-item img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
 
-.menu-item img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
+    .menu-item img:hover {
+      transform: scale(1.06);
+    }
 
-.menu-item img:hover {
-  transform: scale(1.06);
-}
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
 
-/* BUTTONS */
-button {
-  background: #27ae60;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
+    /* BUTTONS */
+    .order-btn {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-button:hover {
-  background: #1e8449;
-  transform: translateY(-3px);
-}
+    .order-btn:hover {
+      background: #1e8449;
+      transform: translateY(-3px);
+    }
 
-/* REVIEWS */
-.reviews p {
-  font-size: 1.2rem;
-  margin: 8px 0;
-}
+    /* FOOTER */
+    footer {
+      background: rgba(20, 20, 20, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
 
-form {
-  margin-top: 20px;
-}
+    /* MOBILE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
 
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: 1px solid #bbb;
-}
+      header p {
+        font-size: 1.2rem;
+      }
 
-input[type="submit"] {
-  background: #e67e22;
-  color: white;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
+      section {
+        margin: 15px;
+      }
 
-input[type="submit"]:hover {
-  background: #ca6f1e;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: rgba(20, 20, 20, 0.9);
-  border-top: 2px solid #d35400;
-  margin-top: 40px;
-}
-
-.footer p {
-  margin: 0;
-}
-
-.footer a {
-  color: #f39c12;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  header p {
-    font-size: 1.2rem;
-  }
-
-  section {
-    margin: 15px;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-</style>
+      .order-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -189,16 +147,40 @@ input[type="submit"]:hover {
 <section id="menu">
   <h2>Menu</h2>
 
-  <!-- All your original menu items and buttons remain unchanged -->
+  <!-- Tuna Sandwich -->
+  <div class="menu-item">
+    <img src="tuna.jpg" alt="Tuna Sandwich">
+    <h3>Tuna Sandwich</h3>
+    <p class="price">R15</p>
+    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20want%20to%20order%20a%20Tuna%20Sandwich" target="_blank">
+      Order on WhatsApp
+    </a>
+  </div>
+
+  <!-- Chicken Mayo Sandwich -->
+  <div class="menu-item">
+    <img src="chicken mayo.jpg" alt="Chicken Mayo Sandwich">
+    <h3>Chicken Mayo Sandwich</h3>
+    <p class="price">R20</p>
+    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20want%20to%20order%20a%20Chicken%20Mayo%20Sandwich" target="_blank">
+      Order on WhatsApp
+    </a>
+  </div>
+
+  <!-- Egg Mayo Sandwich -->
+  <div class="menu-item">
+    <img src="egg mayo.jpg" alt="Egg Mayo Sandwich">
+    <h3>Egg Mayo Sandwich</h3>
+    <p class="price">R20</p>
+    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20want%20to%20order%20an%20Egg%20Mayo%20Sandwich" target="_blank">
+      Order on WhatsApp
+    </a>
+  </div>
 
 </section>
 
-<!-- Other sections (reviews, contact, etc.) remain unchanged -->
-
-<footer class="footer">
-  <p>
-    Designed & Developed by <a href="https://github.com/yourusername" target="_blank">DB Nhambe</a> | Frontend Developer
-  </p>
+<footer>
+  <p>Designed & Developed by <strong>DB Nhambe</strong></p>
 </footer>
 
 </body>
