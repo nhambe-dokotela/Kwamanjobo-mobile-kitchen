@@ -1,181 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KwaManjobo’s Mobile Kitchen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KwaManjobo’s Mobile Kitchen</title>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(
-          rgba(0,0,0,0.25),
-          rgba(0,0,0,0.25)
-        ),
-        url('kitchen-bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #222;
-      font-size: 18px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.25)
+    ),
+    url('kitchen-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  font-size: 18px;
+}
 
-    /* HEADER */
-    header {
-      background: rgba(20, 20, 20, 0.9);
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* HEADER */
+header {
+  background: rgba(20, 20, 20, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
 
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
 
-    header p {
-      font-size: 1.4rem;
-      margin-top: 10px;
-    }
+header p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
 
-    /* SECTIONS */
-    section {
-      background: rgba(255, 248, 240, 0.95);
-      margin: 25px;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
+header a {
+  display: inline-block;
+  margin-top: 20px;
+  background: #27ae60;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
 
-    h2 {
-      font-size: 2.2rem;
-      color: #d35400;
-      margin-bottom: 25px;
-      text-align: center;
-    }
+header a:hover {
+  background: #1e8449;
+}
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
+/* SECTIONS */
+section {
+  background: rgba(255, 248, 240, 0.95);
+  margin: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
-    /* MENU */
-    .menu-item {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+h2 {
+  font-size: 2.2rem;
+  color: #d35400;
+  margin-bottom: 15px;
+  text-align: center;
+}
 
-    .menu-item img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      transition: transform 0.3s ease;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
 
-    .menu-item img:hover {
-      transform: scale(1.06);
-    }
+/* MENU */
+.menu-item {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-    .price {
-      font-weight: bold;
-      color: #27ae60;
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-    }
+.menu-item img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
 
-    /* BUTTONS */
-    .order-btn {
-      background: #27ae60;
-      color: white;
-      border: none;
-      padding: 14px 24px;
-      font-size: 1.1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
+.price {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #000;
+}
 
-    .order-btn:hover {
-      background: #1e8449;
-      transform: translateY(-3px);
-    }
+/* BUTTONS */
+.order-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
 
-    /* REVIEWS */
-    .reviews p {
-      background: #fff;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+.order-btn:hover {
+  background: #1e8449;
+}
 
-    form {
-      margin-top: 20px;
-    }
+/* REVIEWS */
+.reviews p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #bbb;
-    }
+form {
+  margin-top: 20px;
+}
 
-    input[type="submit"] {
-      background: #e67e22;
-      color: white;
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 8px;
-    }
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
 
-    input[type="submit"]:hover {
-      background: #ca6f1e;
-    }
+input[type="submit"] {
+  background: #e67e22;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 
-    /* FOOTER */
-    footer {
-      background: rgba(20, 20, 20, 0.9);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 1rem;
-    }
+input[type="submit"]:hover {
+  background: #ca6f1e;
+}
 
-    /* MOBILE */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+/* MOBILE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
 
-      header p {
-        font-size: 1.2rem;
-      }
+  header p {
+    font-size: 1.2rem;
+  }
 
-      section {
-        margin: 15px;
-      }
-
-      .order-btn {
-        width: 100%;
-      }
-    }
-  </style>
+  section {
+    margin: 15px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -183,38 +167,36 @@
 <header>
   <h1>KwaManjobo’s Mobile Kitchen</h1>
   <p>Fighting campus hunger — one sandwich at a time 🥪</p>
-
-  <!-- VIEW MENU BUTTON -->
-  <a href="#menu" class="order-btn">View Menu</a>
+  <a href="#menu">View Menu</a>
 </header>
 
 <!-- MENU SECTION -->
 <section id="menu">
-  <h2>Menu</h2>
+  <h2>Our Menu</h2>
 
   <div class="menu-item">
     <img src="tuna.jpg" alt="Tuna Sandwich">
-    <h3>Tuna Sandwich</h3>
+    <p><strong>Tuna Sandwich</strong></p>
     <p class="price">R15</p>
-    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20want%20to%20order%20a%20Tuna%20Sandwich" target="_blank">
+    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20would%20like%20to%20order%20a%20Tuna%20Sandwich%20(R15)" target="_blank">
       Order on WhatsApp
     </a>
   </div>
 
   <div class="menu-item">
     <img src="chicken-mayo.jpg" alt="Chicken Mayo Sandwich">
-    <h3>Chicken Mayo Sandwich</h3>
+    <p><strong>Chicken Mayo Sandwich</strong></p>
     <p class="price">R20</p>
-    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20want%20to%20order%20a%20Chicken%20Mayo%20Sandwich" target="_blank">
+    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20would%20like%20to%20order%20a%20Chicken%20Mayo%20Sandwich%20(R20)" target="_blank">
       Order on WhatsApp
     </a>
   </div>
 
   <div class="menu-item">
     <img src="egg-mayo.jpg" alt="Egg Mayo Sandwich">
-    <h3>Egg Mayo Sandwich</h3>
+    <p><strong>Egg Mayo Sandwich</strong></p>
     <p class="price">R20</p>
-    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20want%20to%20order%20an%20Egg%20Mayo%20Sandwich" target="_blank">
+    <a class="order-btn" href="https://wa.me/27676712070?text=Hi%20I%20would%20like%20to%20order%20an%20Egg%20Mayo%20Sandwich%20(R20)" target="_blank">
       Order on WhatsApp
     </a>
   </div>
@@ -224,20 +206,20 @@
 <section class="reviews">
   <h2>Customer Reviews</h2>
 
-  <p>⭐️⭐️⭐️⭐️⭐️ “Best sandwiches on campus! Always fresh.” – Thabo</p>
-  <p>⭐️⭐️⭐️⭐️ “Affordable and tasty, I order almost every day.” – Lerato</p>
-  <p>⭐️⭐️⭐️⭐️⭐️ “Fast service and friendly staff. Highly recommend!” – Sipho</p>
+  <p>⭐️⭐️⭐️⭐️⭐️ “Best sandwiches on campus!” – Thando</p>
+  <p>⭐️⭐️⭐️⭐️ “Affordable and tasty 😋” – Sipho</p>
+  <p>⭐️⭐️⭐️⭐️⭐️ “Fast service and friendly staff” – Lerato</p>
 
   <h3>Leave a Review</h3>
   <form>
     <input type="text" placeholder="Your Name" required>
-    <textarea rows="4" placeholder="Write your review here..." required></textarea>
+    <textarea placeholder="Your Review" rows="4" required></textarea>
     <input type="submit" value="Submit Review">
   </form>
 </section>
 
-<footer>
-  <p>Designed & Developed by <strong>DB Nhambe</strong></p>
+<footer style="text-align:center; padding:20px; background:#111; color:white;">
+  <p>Designed & Developed by DB Nhambe</p>
 </footer>
 
 </body>
