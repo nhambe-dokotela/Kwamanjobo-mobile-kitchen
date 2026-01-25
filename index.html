@@ -133,6 +133,31 @@ input[type="submit"]:hover {
   background: #ca6f1e;
 }
 
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgba(20, 20, 20, 0.9);
+  border-top: 2px solid #d35400;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   header h1 {
@@ -163,93 +188,16 @@ input[type="submit"]:hover {
 
 <section id="menu">
   <h2>Menu</h2>
-
-  <ul>
-    <li class="menu-item">
-      <img src="chicken-mayo.jpg" alt="Chicken Mayo Sandwich">
-      <strong>Chicken Mayo Sandwich – R20</strong><br>
-      <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Chicken%20Mayo%20Sandwich" target="_blank">
-        <button>Order via WhatsApp</button>
-      </a>
-    </li>
-
-    <li class="menu-item">
-      <img src="tuna.jpg" alt="Tuna Sandwich">
-      <strong>Tuna Sandwich – R20</strong><br>
-      <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Tuna%20Sandwich" target="_blank">
-        <button>Order via WhatsApp</button>
-      </a>
-    </li>
-
-    <li class="menu-item">
-      <img src="egg-mayo.jpg" alt="Egg Mayo Sandwich">
-      <strong>Egg & Mayo Sandwich – R15</strong><br>
-      <a href="https://wa.me/27648380142?text=I%20want%20to%20order%20Egg%20and%20Mayo%20Sandwich" target="_blank">
-        <button>Order via WhatsApp</button>
-      </a>
-    </li>
-  </ul>
+  <!-- Your menu items go here -->
 </section>
 
-<section>
-  <h2>How Ordering Works</h2>
-  <ol>
-    <li>Select your sandwich.</li>
-    <li>Click the WhatsApp order button.</li>
-    <li>Confirm payment & collection.</li>
-  </ol>
-</section>
+<!-- Add other sections (reviews, contact form, etc.) as before -->
 
-<section>
-  <h2>Payments</h2>
+<footer class="footer">
   <p>
-     No cash on collection, your payment confirms your order<br>
-    📲 Mobile payments accepted (EFT / eWallet / CashSend)<br>
-    ℹ️ Payment details are shared on WhatsApp after ordering.
+    Designed & Developed by <a href="https://github.com/yourusername" target="_blank">DB Nhambe</a> | Frontend Developer
   </p>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>
-    📱 WhatsApp Only: <strong>27648380142</strong><br>
-    📍 Delivery Area: Campus
-  </p>
-</section>
-
-<section class="reviews">
-  <h2>Customer Reviews</h2>
-
-  <p>⭐⭐⭐⭐⭐ – “Affordable and filling.” – Thabo</p>
-  <p>⭐⭐⭐⭐ – “Quick service between classes.” – Lerato</p>
-
-  <h3>Leave a Review</h3>
-  <form id="reviewForm">
-    <input type="text" id="name" placeholder="Your name" required>
-    <textarea id="review" rows="3" placeholder="Your review" required></textarea>
-    <input type="submit" value="Submit Review">
-  </form>
-
-  <div id="userReviews"></div>
-</section>
-
-<script>
-const form = document.getElementById("reviewForm");
-const userReviews = document.getElementById("userReviews");
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const review = document.getElementById("review").value;
-
-  const p = document.createElement("p");
-  p.textContent = `⭐⭐⭐⭐ – "${review}" – ${name}`;
-
-  userReviews.prepend(p);
-  form.reset();
-});
-</script>
+</footer>
 
 </body>
   </html>
